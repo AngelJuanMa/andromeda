@@ -1,1 +1,571 @@
-/* You can add global styles to this file, and also import other style files */
+/*Generales*/
+.h1-strong{
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom:15px;
+  border-bottom: 1px solid #e1dede;
+}
+#publications-text{
+  font-size: 20px !important;
+  line-height: 35px !important;
+  color: black !important;
+}
+.ClearFix{
+  clear: both;
+  float: none;
+}
+#fixed, #sidebar{
+  position: fixed;
+  }
+.active{
+  background:#f9f9f9;
+}
+ .panel-default{
+  width: 75%;
+  padding: 0px !important;
+
+}
+#panel-boton{
+    right: 10px;
+    top: 20px !important;
+    position: relative !important;
+}
+.pointer{
+  cursor: pointer;
+}
+body{
+  background: #F9F9F9 !important;
+}
+a{
+  color: #000000 !important;
+}
+
+.heart img{
+  background-color: white; 
+  width: 30px;
+  height: 30px;
+}
+/*Cabecera*/
+
+.form-control{
+  justify-content: center;
+}
+
+.navigation {
+  padding: 0px !important;
+  border-radius: 0px !important;
+  background: #ffe !important;
+  -webkit-box-shadow: 0px 3px 0px 0px #E5E5E5; 
+  box-shadow: 0px 3px 0px 0px #E5E5E5;
+
+}
+
+.navigation .navbar {
+  border-radius: 0px !important;
+  background: #fff !important;
+  border: none;
+
+}
+
+.navigation .navbar *{
+  color: #343a40;
+}
+
+
+
+.navigation .navbar .dropdown-menu *{
+  color:black !important;
+}
+
+
+
+.navigation .navbar .dropdown-menu a:hover{
+  background: #eee !important;
+}
+
+.navigation .avatar{
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-top: 9px;
+  margin-right: 2px;
+
+}
+
+.navigation .avatar img{
+  height: auto;
+  width: 48px;
+  right: 5px;
+  position: relative;
+  bottom: 9px;
+}
+
+
+.jumbotron{
+  padding:25px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.user-image-for-edit img{
+  height: 60px;
+}
+
+
+/*GENTE*/
+.people{
+  min-height: 500px;
+}
+
+.item-user .image-user,
+.item-publication .image-user{
+  width: 75px;
+  height: 75px;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.item-user .image-user img,
+.item-publication .image-user img{
+  width: 90px;
+}
+
+.item-user .user-name,
+.item-publication .user-name{
+  margin-top:10px;
+}
+
+.item-user .user-name .nickname{
+  color:#969393;
+}
+
+.item-user .user-name a{
+  color:#555;
+  font-weight: bold;
+}
+
+.avatar-default{
+  width: 100% !important;
+}
+
+/*SIDEBAR*/
+.sidebar-32{
+  width: 32% !important;
+  padding:0px !important;
+
+}
+
+#user-card, #new-publication{
+  padding: 25px;
+  width: 100%;
+}
+
+#new-publication{
+  padding:18px;
+  padding-left:8px;
+}
+
+#user-card .avatar{
+  width: 75px;
+  height: 75px;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+#user-card .avatar img{
+  border-radius: 50px;
+    height: 100px;
+    width: 100px;
+    right: 14px;
+    position: relative;
+    bottom: 9px;
+}
+
+
+
+#user-card .name-surname .nickname{
+  color: black;
+}
+
+#user-card .stats{
+  border-top: 1px solid #eee;
+  margin-top:10px;
+}
+
+#user-card .stats a:hover{
+  text-decoration: none;
+}
+
+#user-card .stats a:hover .number-stats{
+  color: #cc1717;
+}
+
+#user-card .label-stats,
+#user-card .number-stats{
+  display: block;
+  text-align: center;
+  transition:all 300ms;
+
+}
+#sidebar{
+    top: 118px;
+    padding: 25px;
+    width: 32%;
+    right: 10px;
+}
+
+
+#user-card .label-stats{
+  font-weight: bold;
+  color: #555;
+}
+
+#user-card .number-stats{
+  font-weight: bold;
+  color: green;
+}
+.username{
+  color: #969393 !important; 
+}
+
+#user-card .following-data{
+  float:left;
+  padding-left: 18px;
+  padding-right: 18px;
+  margin-top:10px;
+  border-right: 2px solid #eee;
+}
+
+#user-card .following-data:first-child{
+  padding-left: 6px;
+}
+
+#user-card .following-data:last-child{
+  border: none;
+}
+
+/*TIMELINE*/
+#publications{
+  max-height: 60%;
+  max-width: 60%;
+}
+
+
+#publications .date{
+  color: gray;
+}
+
+/*PERFILES*/
+#data-profile{
+  min-height: 500px;
+  text-align: left;
+}
+
+#data-profile .avatar{
+  width: 185px;
+  height: 185px;
+  border-radius: 400px;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+#data-profile .avatar img{
+  width: 100%;
+}
+
+#data-profile .user-name{
+  margin-top:15px;
+
+}
+
+#data-profile .user-name .label{
+  margin-bottom: 15px;
+}
+
+#data-profile .user-name .name{
+  font-size: 24px;
+  font-weight: bold;
+  color:#555;
+}
+
+#data-profile .user-name .nick{
+  font-size: 24px;
+  font-weight: normal;
+  color:gray;
+}
+
+#data-profile .stats {
+  border-left: 4px solid #ccc;
+  margin-left:35px;
+  padding-left: 25px;
+  height: 180px;
+}
+
+#data-profile .stats a{
+  font-size: 20px;
+  line-height: 35px;
+  color:#555;
+}
+
+#data-profile .publications{
+  margin-top: 40px;
+}
+
+
+/*Formulario*/
+input[type="text"],
+input[type="password"], 
+input[type="email"] 
+{
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+  margin-left: auto !important;
+    margin-right: auto !important;
+
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border-bottom: 2px solid #16a085;
+  transition: 0.2s ease;
+
+}
+
+input[type="submit"] {
+  margin-top: 28px;
+  width: 120px;
+  height: 32px;
+  background: #16a085;
+  border-radius: 9px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.register{
+  font-size: 13px !important;
+}
+
+
+input[type="submit"]:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+input[type="submit"]:active {
+  opacity: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+.error{
+  border-bottom: 2px solid #dc3545 !important;
+  transition: 0.2s ease !important;
+  color: red !important;
+  }
+
+/*Footer*/
+#main-footer {
+  width: 100%;
+    height: 40px;
+    bottom: 0px;
+    position: relative;
+    background: #fafafa;
+    opacity: 0.5 !important;
+    color: black;
+    text-align: center;
+    padding: 0px;
+    margin-top: 39px;
+}
+  #main-footer p {
+    margin: 0;
+  }
+  
+  #main-footer a {
+    color: white;
+  }
+
+
+/*Login*/
+
+nav {
+  float: center;
+}
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-right: 20px;
+  }
+  
+    nav ul li {
+      display: inline-block;
+      line-height: 50px;
+    }
+      
+      nav ul li a {
+        display: block;
+        padding: 0 10px;
+        text-decoration: none;
+      }
+      
+        nav ul li a:hover {
+          background: #red;
+        }
+  
+#main-content, #main-content-register{
+  background: white;
+  width: 35%;
+  height: 300px;
+  max-width: 300px;
+  margin-top: 10%;
+  left: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow: fixed;
+    }
+
+  #main-content header,
+  #main-content .content {
+
+  padding: 40px;
+    }
+
+#main-content-register{
+  height: 400px;
+  white-space: nowrap;
+}
+
+
+#iphone{
+  position: relative;
+
+   left: -130%;
+   bottom: 340px;
+    width: 300px;
+     height: 400px;
+} 
+
+
+#social{
+    max-height: 150px;
+    position: absolute;
+    left: -88%;
+    bottom: 20%;
+    width: 155px;
+} 
+
+#javascript{
+    max-height: 130px;
+    position: absolute;
+    left: -88%;
+    bottom: 56%;
+    width: 154px;
+    
+} 
+
+.forget{
+  margin-top: 15px !important;
+}
+
+#contenido{
+      position: absolute;
+      -webkit-flex-direction: column;
+}
+
+@media (max-width: 1199px){
+
+  #main-content {
+    left: 20%;
+}
+
+#iphone{
+  bottom: 320px;
+}
+
+#javascript{
+    bottom: 56%;
+}
+
+#social{
+     bottom: 20%;
+    width: 155px;
+} 
+}
+
+@media (max-width: 858px){
+
+#images-login{
+  display: none;
+}
+
+#main-content{
+  left: 0%;
+}
+
+}
+@media (max-width: 760px){
+
+  #iphone {
+    width: 250px;
+}
+
+#main-content , #main-content-register{
+  width: 100%;
+}
+
+}
+.dropdown-menu{
+  margin: 0px;
+  padding: 0px !important;
+}
+
+
+#sinpublicaciones img{
+  width: 10%;
+  height: 10%;
+}
+
+#profile{
+  position: relative !important;
+  top: 30% !important;
+  left: 30% !important;
+}
+#sinpublicaciones{
+  position: relative;
+  top: 250px;
+  right: 45%;
+  text-align: center;
+}
+
+.content-profile{
+  position: relative;
+  left: 5%;
+  margin-top: 50px;
+}

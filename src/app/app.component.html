@@ -1,20 +1,80 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<!--HEADER-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="identity">
+<div  class="navigation col-lg-12">
+  <nav class="navbar navbar-default">
+      
+      <div class="navbar-header">
+        <a  [routerLink]="['/publicaciones']" [routerLinkActive]="['active']">
+        <img src="../assets/logo.png" height="70px">
+      </a>
+      </div>
+      <div class="nav navbar-nav" *ngIf="identity">
+
+        <a  [routerLink]="['/publicaciones']" [routerLinkActive]="['active']">
+            <span class="glyphicon glyphicon-th-list"></span>
+            Publicaciones
+        </a>
+       
+        <ul>
+        <li> 
+          <a [routerLink]="['/gente']" [routerLinkActive]="['active']">
+            <span class="glyphicon glyphicon-user"></span>
+            Gente
+          </a>
+        </li>
+
+        <li> 
+          <a [routerLink]="['/mensajes']" [routerLinkActive]="['active']">
+            <span class="glyphicon glyphicon-envelope"></span>
+            Mensajes
+          </a>
+        </li>
+      </ul>
+    
+      <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+    </form>
+
+      </div>
+
+      <ul class="nav navbar-nav navbar-right" *ngIf="identity">
+        <li class="avatar">
+          <!--cargar imagen de usuario-->
+          <img src="{{ url + 'get-image-user/' + identity.image }}" *ngIf="identity && identity.image" />
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            {{identity.name}} <span class="caret"></span>
+          </a>
+
+          <ul class="dropdown-menu">
+              <li>
+                <a [routerLink]="['/perfil',identity._id]">
+                  <span class="glyphicon glyphicon-user"></span>
+                  Mi perfil
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="['/mis-datos']">
+                  <span class="glyphicon glyphicon-cog"></span>
+                  Mis datos
+                </a>
+              </li>
+              <li>
+                <a class="pointer" (click)="logout()">
+                  <span class="glyphicon glyphicon-log-out"></span>
+                  Cerrar sesión
+                </a>
+              </li>
+          </ul>
+        </li>
+      </ul>
+
+</nav>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+</nav>
+
+
+
+<router-outlet></router-outlet>
 

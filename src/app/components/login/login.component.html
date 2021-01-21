@@ -1,0 +1,44 @@
+
+<section id="main-content ">
+	<article>
+<div class="col-lg-5 " id="main-content">
+	<h1 class="h1-strong">{{title}}</h1>
+
+<!--
+	<div class="alert alert-success" *ngIf="status == 'success'">
+		Te has identificado correctamente, bienvenido!!
+	</div>
+
+	<div class="alert alert-danger" *ngIf="status == 'error'">
+		No te has podido identificar correctamente!!
+	</div>
+-->
+	<form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="col-lg-12">
+		<p>
+			<input type="text" name="email" placeholder="Usuario o correo electrónico" autocorrect="off" maxlength="75" [class.error]="!email.valid && email.touched || status == 'error'" #email="ngModel" [(ngModel)]="user.nick" [(ngModel)]="user.email" class="form-control" required  />
+
+		</p>
+		
+		<p>
+			<input type="password" placeholder="Contraseña" [class.error]="!password.valid && password.touched || status == 'error'" name="password" #password="ngModel" [(ngModel)]="user.password" class="form-control" required />
+
+		</p>
+
+		<input type="submit" value="Iniciar sesión" class="btn btn-success" [disabled]="!loginForm.form.valid" />
+	</form>
+	<a [routerLink]="['/registro']" class="forget">Registrate</a>
+	<div id="images-login">
+	<img src="../assets/iphone-160307.svg" id="iphone" >
+	<img src="../assets/javascript.png" id="javascript" >
+	<img src="../assets/social-media.svg" id="social" >
+	</div>
+</div>
+</article>	
+</section>
+
+
+
+		
+	
+
+

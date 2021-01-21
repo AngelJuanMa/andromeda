@@ -1,0 +1,35 @@
+<section id="main-content-register">
+	<article>
+
+	<h1 class="h1-strong">{{title}}</h1>
+
+	<div class="alert alert-danger" *ngIf="status == 'error'">
+		El registro no ha podido completarse, quizas tu email o nickname ya esté en uso, intentalo de nuevo con otros datos
+	</div>
+
+	<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" class="col-lg-12">
+		<p>
+			<input type="email"  placeholder="Correo electrónico" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control" [class.error]="!email.valid && email.touched" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+		</p>
+
+		<p>
+			<input type="text"   placeholder="Nombre completo" name="name" #name="ngModel" [(ngModel)]="user.name" maxlength="20" class="form-control" [class.error]="!name.valid && name.touched" required />
+		</p>
+
+		<p>	
+			<input type="text" autocapitalize="off" placeholder="Nombre de usuario" name="nick" #nick="ngModel" [(ngModel)]="user.nick" maxlength="20" class="form-control" [class.error]="!nick.valid && nick.touched" required />
+		</p>
+
+		<p>
+			<input type="password" autocomplete="off" placeholder="Contraseña" name="password" #password="ngModel" [class.error]="!password.valid && password.touched" [(ngModel)]="user.password" class="form-control" required />
+		</p>
+		<p>
+			 <input type="checkbox" name="politics"   #politics="ngModel" [(ngModel)]="user.politics" required> <a>Politicas de privacidad y seguridad</a>
+		</p>
+		<p>Ya tenes una cuenta?<a href="login" class="forget"> Logueate</a></p>
+		<input type="submit"  value="{{title}}" class="btn btn-success register" [disabled]="!registerForm.form.valid" /> 
+	</form>
+
+		
+</article>
+</section>
